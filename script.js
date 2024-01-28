@@ -1,12 +1,15 @@
 function deepEquals(a, b) {
-  // Check for strict equality first
-  if (a === b) {
+ if (a === b) {
     // Handle NaN case
-    if (Number.isNaN(a) && Number.isNaN(b)) {
-      return true;
-    }
+    // if (Number.isNaN(a) && Number.isNaN(b)) {
+    //   return true;
+    // }
     return true;
   }
+
+  if (Number.isNaN(a) && Number.isNaN(b)) {
+      return true;
+    }
 
   // Check for different types
   if (typeof a !== typeof b) {
@@ -53,4 +56,4 @@ function deepEquals(a, b) {
   return false;
 }
 
-module.exports = deepEquals;
+module.exports=deepEquals;
